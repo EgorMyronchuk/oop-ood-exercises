@@ -44,6 +44,129 @@
 9. Write a Java program to create a class called "Reservation" with attributes for reservation ID, customer name, and date. Create subclasses "ResortReservation" and "RailwayReservation" that add specific attributes like room number for hotels and seat number for flights. Implement methods to check reservation status and modify reservation details.
 10. Write a Java program to create a class called "Pet" with attributes for name, species, and age. Create subclasses "Dog" and "Bird" that add specific attributes like favorite toy for dogs and wing span for birds. Implement methods to display pet details and calculate the pet's age in human years.
 11. Write a Java program to create a class called "GymMembership" with attributes for member name, membership type, and duration. Create a subclass "PremiumMembership" that adds attributes for personal trainer availability and spa access. Implement methods to calculate membership fees and check for special offers based on membership type.
+
+# Preparing to OOD  
+### **Singleton – Конфігураційний Менеджер**  
+
+1. Реалізуй клас `ConfigurationManager`, який:  
+2. Зберігає конфіг-параметри в `Map<String, String>`  
+3. Дозволяє зчитувати та змінювати параметри  
+4. Повинен мати лише один екземпляр (Singleton) у всій програмі  
+5. Гарантує централізовану конфігурацію, що не дублюється  
+
+**Питання для рефлексії:**  
+1. Коли в реальних програмах використовується Singleton?  
+2. Чи має цей підхід мінуси у тестуванні або багатопоточності?  
+3. Чим він краще за static-методи?  
+4. Яка UML-структура цього патерну?  
+5. У яких ситуаціях Singleton може нашкодити?  
+
+
+### **Strategy – Розрахунок Тарифу на Парковці**  
+
+1. Реалізуй інтерфейс `FareStrategy`  
+2. Створи реалізації:  
+    - `BaseFareStrategy` – базовий тариф: 10₴/год  
+    - `WeekendFareStrategy` – у вихідні: 15₴/год  
+3. Реалізуй клас `FareCalculator`, який приймає стратегію та рахує ціну  
+4. Дозволь змінювати стратегію "на льоту"  
+5. Патерн дозволяє змінювати логіку, не змінюючи сам калькулятор  
+
+**Питання для рефлексії:**  
+1. Чому Strategy краще, ніж if-else у класі?  
+2. Як би ти додав нову стратегію?  
+3. Яка UML-структура Strategy?  
+4. Коли цей патерн – зайве ускладнення?  
+
+
+### **State – Поведінка Торгового Автомата**  
+
+1. Створи інтерфейс `VendingMachineState` з методами:  
+    - `insertCoin()`  
+    - `selectItem()`  
+2. Створи класи станів:  
+    - `IdleState` – очікує монету  
+    - `HasMoneyState` – очікує вибір товару  
+    - `DispensingState` – видає товар  
+3. Клас `VendingMachine` тримає поточний стан і делегує виклики  
+4. Поведінка змінюється залежно від стану (без if-else)  
+
+**Питання для рефлексії:**  
+1. Чим State відрізняється від Strategy?  
+2. Як виглядає UML-подання цього патерну?  
+3. Коли цей патерн буде надто складним?  
+4. Чи можна було реалізувати це через switch або enum?  
+
+
+### **Facade – Єдина Точка Керування Бібліотекою**  
+
+1. Реалізуй клас `LibraryFacade`, який:  
+    - Знаходить книгу  
+    - Бронює її  
+    - Сповіщає користувача  
+2. Усередині фасаду використовуй підсистеми:  
+    - `BookInventory`  
+    - `ReservationService`  
+    - `NotificationService`  
+3. Клієнт взаємодіє лише з `LibraryFacade`  
+4. Фасад приховує складність взаємодії між модулями  
+
+**Питання для рефлексії:**  
+1. Чим Facade відрізняється від Controller?  
+2. Яка UML-структура патерну Facade?  
+3. У яких випадках його використання корисне?  
+4. Коли цей підхід додає зайву складність?  
+
+
+### **Observer – Підписка на Нові Книги**  
+
+1. Створи інтерфейс `Observer` (наприклад, `LibraryUser`)  
+2. Створи клас `BookPublisher`, який:  
+    - Зберігає список підписників  
+    - Сповіщає їх про нові книги  
+3. Користувачі можуть підписуватися/відписуватись  
+4. Коли з’являється нова книга — всі отримують повідомлення  
+
+**Питання для рефлексії:**  
+1. Як виглядає UML-структура патерну Observer?  
+2. Де він використовується в реальних фреймворках (наприклад, JavaFX, Spring)?  
+3. Які переваги/недоліки має такий підхід?  
+4. Коли краще не використовувати Observer?
+
+
+### **MVC – Консольна Бібліотека**  
+
+1. Розділи логіку на 3 компоненти:  
+    - `Model` – клас `Book`, дані користувача  
+    - `View` – методи виводу в консоль (список книг, меню)  
+    - `Controller` – обробка введення: додати/видалити/знайти  
+2. Вся логіка в контролері  
+3. Вся бізнес-логіка в моделі  
+4. View не знає про модель напряму — лише через контролер  
+
+**Питання для рефлексії:**  
+1. Чому MVC корисний для підтримки коду?  
+2. Який UML-зв’язок між трьома компонентами?  
+3. Чи є ризик, що Controller стане “збірною солянкою”?  
+4. У яких випадках MVC – зайва абстракція?  
+
+
+### **Factory Method – Фабрика Монет**  
+
+1. Створи інтерфейс `Coin`  
+2. Створи реалізації:  
+    - `Penny`, `Nickel`, `Dime`, `Quarter`  
+3. Створи `CoinFactory`, яка приймає номінал і повертає відповідну монету  
+4. Клієнт не повинен знати, який клас створюється  
+5. Це дозволяє легко додавати нові монети  
+
+**Питання для рефлексії:**  
+1. У чому перевага Factory над прямим викликом `new`?  
+2. Як виглядає UML-структура цього патерну?  
+3. Чи легко масштабувати таку фабрику?  
+4. Коли Factory Method не варто використовувати?  
+
+
 # OOD exercises
 
 | Назва Задачі | Короткий Опис | Ключові Об'єкти/Класи | Застосовувані Принципи/Патерни | Посилання на Детальне Рішення (з UML та Кодом)                                                              |
