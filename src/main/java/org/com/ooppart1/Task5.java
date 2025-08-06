@@ -11,6 +11,10 @@ public class Task5 {
         static  int[] arr = new int[]{1, 2 , 3 , 4 , 5 , 6 , 7};
 
         public static void display(){
+            if (arr== null || arr.length == 0) {
+                System.out.println("Array is empty.");
+                return;
+            }
             int buffer = 0 ;
             for(int i = 0 ; i < arr.length ; i++){
                 if(arr[i] > buffer){

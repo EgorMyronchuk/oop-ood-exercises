@@ -9,14 +9,14 @@ package org.com.ooppart1;
 public class Task14 {
 
     public static class BankAccount {
-        int AcctNo;
-        double balance;
-        String AcctType;
+        private int AcctNo;
+        private double balance;
+        private String AcctType;
 
         public BankAccount(int acctNo, double balance, String acctType) {
-            AcctNo = acctNo;
+            this.AcctNo = acctNo;
             this.balance = balance;
-            AcctType = acctType;
+            this.AcctType = acctType;
         }
 
         public void deposit (double amount) {
@@ -24,7 +24,7 @@ public class Task14 {
             System.out.println("Deposited successfully");
         }
         public void withdraw (double amount) {
-            if (amount < this.balance) {
+            if (amount <= this.balance) {
                 this.balance -= amount;
                 System.out.println("Withdrawn successfully");
                 return;

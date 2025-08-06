@@ -63,6 +63,7 @@ public class Task18 {
 
         Employee.printEmployees(emps);
    }
+   // In site it`s implements like entity and service which do all action with entity. Anemic Domain Model
 }
 
 

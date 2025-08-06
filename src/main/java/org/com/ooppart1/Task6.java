@@ -8,9 +8,17 @@ public class Task6 {
     public static class Rectangle {
         int length = 1;
         int width = 1;
-
+        // better to use constructor with no-variables
+//        public Rectangle() {
+//            this.length = 1;
+//            this.width = 1;
+//        }
         public void setLength(int length) {
-            this.length = length;
+            if (length > 0) {
+                this.length = length;
+            } else {
+                System.out.println("Length must be positive.");
+            }
         }
 
         @Override
@@ -19,7 +27,11 @@ public class Task6 {
         }
 
         public void setWidth(int width) {
-            this.width = width;
+            if (width > 0) {
+                this.width = width;
+            } else {
+                System.out.println("Width must be positive.");
+            }
         }
 
         public int getLength() {
