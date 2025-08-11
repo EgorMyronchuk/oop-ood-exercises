@@ -1,4 +1,4 @@
-package org.com.preparingOOD.creationalpatterns;
+package org.com.preparingOOD.creationalpatterns.singleton;
 
 import java.util.HashMap;
 import java.util.Map;
