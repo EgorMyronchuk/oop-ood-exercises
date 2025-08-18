@@ -1,38 +1,82 @@
-# Exercises OOP
-## Exercises from https://www.geeksforgeeks.org/java/java-oop-exercises/  
-1. Create a class MessagePrinter with a method printMessage(String name) which prints the message "hello <name>".  
+# 🚀 ООП та Патерни Проєктування
+## 📚 Зміст
+
+- [🎯 Вправи з OOP (GeeksForGeeks)](#-вправи-з-oop-geeksforgeeks)
+- [Some special exercises from https://www.w3resource.com/java-exercises/oop/index.php](#some-special-exercises-from-httpswwww3resourcecomjava-exercisesoopindexphp)
+- [🏗 Породжувальні патерни](#-породжувальні-патерни)
+   - [Singleton – Конфігураційний Менеджер](#singleton--конфігураційний-менеджер)
+   - [Factory Method – Фабрика Монет](#factory-method--фабрика-монет)
+   - [Abstract Factory – Система UI для Тем Оформлення](#abstract-factory--система-ui-для-тем-оформлення)
+   - [Builder – Конструктор Піцци](#builder--конструктор-піцци)
+   - [Prototype – Клонування космічних кораблів](#prototype--клонування-космічних-кораблів)
+- [🧱 Структурні патерни](#-структурні-патерни)
+   - [Facade – Єдина Точка Керування Бібліотекою](#facade--єдина-точка-керування-бібліотекою)
+   - [Adapter – Адаптер для підтримки нових аудіо форматів у старому плеєрі](#adapter--адаптер-для-підтримки-нових-аудіо-форматів-у-старому-плеєрі)
+   - [Bridge – Розділення абстракції та реалізації для рендерингу фігур](#bridge--розділення-абстракції-та-реалізації-для-рендерингу-фігур)
+   - [Composite – Організація ієрархічної структури об’єктів для спільної роботи з окремими елементами і групами](#composite--організація-ієрархічної-структури-обєктів-для-спільної-роботи-з-окремими-елементами-і-групами)
+   - [Decorator – Динамічне розширення функціональності об’єктів без зміни їхнього коду](#decorator--динамічне-розширення-функціональності-обєктів-без-зміни-їхнього-коду)
+   - [Flyweight – Економія пам’яті за рахунок розділення спільного стану між об’єктами](#flyweight--економія-памяті-за-рахунок-розділення-спільного-стану-між-обєктами)
+   - [Proxy – Контроль доступу та оптимізація запитів](#proxy--контроль-доступу-та-оптимізація-запитів)
+- [🤝 Поведінкові патерни](#-поведінкові-патерни)
+   - [Strategy – Розрахунок Тарифу на Парковці](#strategy--розрахунок-тарифу-на-парковці)
+   - [State – Поведінка Торгового Автомата](#state--поведінка-торгового-автомата)
+   - [Observer – Підписка на Нові Книги](#observer--підписка-на-нові-книги)
+   - [Chain of Responsibility – Гнучка передача обробки між об’єктами](#chain-of-responsibility--гнучка-передача-обробки-між-обєктами)
+   - [Command – Інкапсуляція запиту у вигляді об’єкта](#command--інкапсуляція-запиту-у-вигляді-обєкта)
+   - [Iterator – Послідовний обхід колекцій фільмів](#iterator--послідовний-обхід-колекцій-фільмів)
+   - [Visitor – Операції над елементами документу](#visitor--операції-над-елементами-документу)
+   - [Mediator – Координація взаємодії між об’єктами](#mediator--координація-взаємодії-між-обєктами)
+   - [Memento – Збереження і відновлення стану об’єкта](#memento--збереження-і-відновлення-стану-обєкта)
+   - [Template Method – Шаблонний метод](#template-method--шаблонний-метод)
+- [🏛 Архітектурні патерни](#-архітектурні-патерни)
+   - [MVC – Консольна Бібліотека](#mvc--консольна-бібліотека)
+
+---
+
+# 🚀 ООП та Патерни Проєктування
+## 🎯 Вправи з OOP (GeeksForGeeks)
+<details>
+## Some special exercises from https://www.geeksforgeeks.org/java/java-oop-exercises/ 
+  <summary>Розгорнути розділ</summary>
+
+1. Create a class MessagePrinter with a method printMessage(String name) which prints the message "hello <name>".
 2. Create a class Calculator with the following methods:  
    calculateSum(int number1, int number2) to calculate the sum of two numbers.  
-   calculateDifference(int number1, int number2) to calculate the difference between two numbers.  
-3. Create a class Employee with overloaded constructors to initialize employee details based on different combinations of arguments. Ensure the constructors support the creation of objects in various ways.  
-4. Create a class SeriesCalculator with a method calculateSum(int n) to calculate the sum of the first n numbers in the series 1 + 3 + 5 + 7 + .... Use the formula Sum = (n/2) * [2*a + (n-1)*d], where "a" is the first term and "d" is the common difference.  
-5. Create a class Biggest that contains a single-dimensional array as a data member and a method display() to find and display the largest element of the array.  
-6. Create a class Rectangle with attributes length and width, each defaulting to 1. The class should include set and get methods for both attributes, and a method to calculate the area of the rectangle.  
-7. Create a class Person with firstName and lastName as data members. Override the toString() method to return the full name of the person. Define constructors to take appropriate parameters.  
-8. Create a Student class with name, rollNo, and marks as attributes. Write a method to calculate the grade based on the marks and display the grade. Create multiple instances of the Student class and print their grades.  
-9. Write a program to accept three numbers and find the largest of the three using method overloading.  
-10. Write a program to accept a number and display its last digit in words using a method in a class.  
-11. Create a program that keeps track of the number of objects created and displays the count in a function called display().  
-12. Write a program to accept a student’s name and three marks. Calculate the total and average, and display the result using a class and object.  
-13. Create a class Car with attributes make, model, and year. The class should have a method displayDetails() that prints the details of the car. Include a constructor to initialize these attributes. Create an instance of the Car class and display its details.  
-14. Create a class BankAccount with members AcctNo, balance, and AcctType. Implement the following operations:  
-    - Deposit an amount of 10,000.  
-    - Withdraw an amount of 5,000.  
-    - Display account details.  
-15. Create a program to accept three numbers and find the largest and second largest numbers using object-oriented principles.  
-16. Write a program to store N elements in an array of integers. Display the elements, then accept a number to search for. Display whether the number is found using a linear search method within a class.  
-17. Create a class Employee with members empNo, name, department, and salary. In main, create a reference variable of type Employee, allocate memory for the Employee object using the new operator, and initialize the data members using command line arguments. Display the data members.  
-18. Create an Employee class with members empNo, name, department, and salary. Use a one-dimensional array of Employee objects (size 10) to read the data for 5 employees from command line arguments. Display the data and determine which employee has the highest salary.  
-19. Create a class called AlphabetChecker with a method checkVowelOrConsonant(char letter). The method should accept a character (alphabet) and determine if it is a vowel (a, e, i, o, u) or a consonant. The program should display an appropriate message based on the input letter. Ensure the method handles both uppercase and lowercase letters.  
+   calculateDifference(int number1, int number2) to calculate the difference between two numbers.
+3. Create a class Employee with overloaded constructors to initialize employee details based on different combinations of arguments. Ensure the constructors support the creation of objects in various ways.
+4. Create a class SeriesCalculator with a method calculateSum(int n) to calculate the sum of the first n numbers in the series 1 + 3 + 5 + 7 + .... Use the formula Sum = (n/2) * [2*a + (n-1)*d], where "a" is the first term and "d" is the common difference.
+5. Create a class Biggest that contains a single-dimensional array as a data member and a method display() to find and display the largest element of the array.
+6. Create a class Rectangle with attributes length and width, each defaulting to 1. The class should include set and get methods for both attributes, and a method to calculate the area of the rectangle.
+7. Create a class Person with firstName and lastName as data members. Override the toString() method to return the full name of the person. Define constructors to take appropriate parameters.
+8. Create a Student class with name, rollNo, and marks as attributes. Write a method to calculate the grade based on the marks and display the grade. Create multiple instances of the Student class and print their grades.
+9. Write a program to accept three numbers and find the largest of the three using method overloading.
+10. Write a program to accept a number and display its last digit in words using a method in a class.
+11. Create a program that keeps track of the number of objects created and displays the count in a function called display().
+12. Write a program to accept a student’s name and three marks. Calculate the total and average, and display the result using a class and object.
+13. Create a class Car with attributes make, model, and year. The class should have a method displayDetails() that prints the details of the car. Include a constructor to initialize these attributes. Create an instance of the Car class and display its details.
+14. Create a class BankAccount with members AcctNo, balance, and AcctType. Implement the following operations:
+   - Deposit an amount of 10,000.
+   - Withdraw an amount of 5,000.
+   - Display account details.
+15. Create a program to accept three numbers and find the largest and second largest numbers using object-oriented principles.
+16. Write a program to store N elements in an array of integers. Display the elements, then accept a number to search for. Display whether the number is found using a linear search method within a class.
+17. Create a class Employee with members empNo, name, department, and salary. In main, create a reference variable of type Employee, allocate memory for the Employee object using the new operator, and initialize the data members using command line arguments. Display the data members.
+18. Create an Employee class with members empNo, name, department, and salary. Use a one-dimensional array of Employee objects (size 10) to read the data for 5 employees from command line arguments. Display the data and determine which employee has the highest salary.
+19. Create a class called AlphabetChecker with a method checkVowelOrConsonant(char letter). The method should accept a character (alphabet) and determine if it is a vowel (a, e, i, o, u) or a consonant. The program should display an appropriate message based on the input letter. Ensure the method handles both uppercase and lowercase letters.
 20. Create a class Book with data members Title, Author, Cost, and noOfBooks. Implement a function to display information about the book. Also:  
     Create 3 instances of the Book class and initialize the data members.  
-    Accept a title and noOfBooks from the user. Check if the book exists and if sufficient copies are available. If so, calculate and display the total cost.  
-21. Create a class Employee with overloaded constructors to initialize employee details based on different combinations of arguments. Test method overloading in a class by creating methods with the same name but different parameter types, return types, or parameter orders, and identify which can coexist.  
-22. Create a class Store with attributes StoreID, StoreName, ProductList, and Revenue. Implement methods to add a product to the list, calculate total revenue, and display store information.  
-23. Write a program to perform matrix addition using classes and objects, and display the result.  
+    Accept a title and noOfBooks from the user. Check if the book exists and if sufficient copies are available. If so, calculate and display the total cost.
+21. Create a class Employee with overloaded constructors to initialize employee details based on different combinations of arguments. Test method overloading in a class by creating methods with the same name but different parameter types, return types, or parameter orders, and identify which can coexist.
+22. Create a class Store with attributes StoreID, StoreName, ProductList, and Revenue. Implement methods to add a product to the list, calculate total revenue, and display store information.
+23. Write a program to perform matrix addition using classes and objects, and display the result.
 24. Create an abstract class Shape with abstract methods calculateArea() and calculatePerimeter(). Then, implement two subclasses Rectangle and Circle. The Rectangle class should have attributes for length and width, and the Circle class should have an attribute for radius. Both subclasses should implement the abstract methods to calculate the area and perimeter. Write a program to create instances of both classes, set their attributes, and display their area and perimeter.
-25. Create a class Customer with name, address, and phone as attributes. Implement polymorphism by overriding methods in a subclass VIPCustomer to apply discounts for VIP customers.  
+25. Create a class Customer with name, address, and phone as attributes. Implement polymorphism by overriding methods in a subclass VIPCustomer to apply discounts for VIP customers.
+
+</details>
 ## Some special exercises from https://www.w3resource.com/java-exercises/oop/index.php
+<details>
+  <summary>Розгорнути розділ</summary>
+
 1. Write a Java program to create a class called "BankAccount" with attributes for account number, account holder's name, and balance. Include methods for depositing and withdrawing money, as well as checking the balance. Create a subclass called "SavingsAccount" that adds an interest rate attribute and a method to apply interest.
 2. Write a Java program to create a class called "Vehicle" with attributes for make, model, and year. Create subclasses "Car" and "Truck" that add specific attributes like trunk size for cars and payload capacity for trucks. Implement a method to display vehicle details in each subclass.
 3. Write a Java program to create a class called "Customer" with attributes for name, email, and purchase history. Implement methods to add purchases to the history and calculate total expenditure. Create a subclass "LoyalCustomer" that adds a discount rate attribute and a method to apply the discount.
@@ -49,7 +93,10 @@
 
 ---
 
-## Creational Patterns
+</details>
+## 🏗 Породжувальні патерни
+<details>
+  <summary>Розгорнути розділ</summary>
 
 ---
 
@@ -187,7 +234,10 @@
 
 ---
 
-## Structural Patterns
+</details>
+## 🧱 Структурні патерни
+<details>
+  <summary>Розгорнути розділ</summary>
 
 ---
 
@@ -302,9 +352,159 @@
 4. Чи можна додати нові типи компонентів без зміни клієнтського коду?
 5. У яких сферах або проєктах Composite буде особливо корисним?
 
+### Decorator – Динамічне розширення функціональності об’єктів без зміни їхнього коду
+
+#### Завдання
+Реалізуй систему обробки текстових повідомлень для чату, де базове повідомлення можна доповнювати різними поведінками (наприклад, форматування, маркування часу, фільтрація) без зміни початкового класу. Використай патерн Decorator, щоб мати можливість динамічно комбінувати декоратори та застосовувати їх у довільному порядку.
+
+#### Кроки виконання
+1. Створи інтерфейс `Message` з методом:
+   - `String getContent()` — повертає поточний вміст повідомлення.
+
+2. Реалізуй клас `PlainMessage`, який представляє базове повідомлення:
+   - Приймає текст у конструкторі.
+   - Повертає текст без змін у `getContent()`.
+
+3. Створи абстрактний клас `MessageDecorator`, який реалізує `Message`:
+   - Містить посилання на інший об’єкт `Message` (який декорується).
+   - Делегує виклик `getContent()` вкладеному об’єкту.
+   - Слугує базою для конкретних декораторів.
+
+4. Реалізуй щонайменше три конкретні декоратори:
+   - `TimestampDecorator` — додає на початок рядка позначку часу у форматі `YYYY-MM-DDTHH:mm:ss` і пробіл перед оригінальним текстом.
+   - `UppercaseDecorator` — перетворює вміст повідомлення у верхній регістр.
+   - `CensorVowelsDecorator` — замінює всі голосні літери (`a, e, i, o, u, A, E, I, O, U`, а також `а, е, є, и, і, ї, о, у, ю, я, А, Е, Є, И, І, Ї, О, У, Ю, Я`) на символ `'*'`.
+
+5. Перевір комбінації декораторів у клієнтському коді:
+   - Створи базове повідомлення з текстом, наприклад: `Hello, Decorator!`.
+   - Застосуй декоратори в різному порядку та виведи результати:
+      - Лише `PlainMessage` → очікується оригінальний текст.
+      - `UppercaseDecorator(PlainMessage)` → текст у верхньому регістрі.
+      - `CensorVowelsDecorator(PlainMessage)` → замінені голосні.
+      - `TimestampDecorator(CensorVowelsDecorator(UppercaseDecorator(PlainMessage)))` → ілюстрація роботи ланцюжка (порядок має впливати на результат).
+
+6. Додай клас `Demo` (клієнтський код):
+   - Створює кілька варіацій ланцюжків декораторів.
+   - Виводить у консоль результати кожної варіації з підписами, щоб було видно відмінності між порядком застосування декораторів.
+
+7. Забезпеч тестованість:
+   - Для кожного декоратора наведи по 1–2 приклади вхідних рядків і очікуваних результатів (можна у вигляді коментарів або простих перевірок у `main`).
+   - Переконайся, що декоратори не змінюють стан базового `PlainMessage`, а працюють лише з результатом `getContent()` вкладеного об’єкта.
+
+#### Питання для рефлексії
+1. Яку проблему вирішує патерн Decorator у порівнянні з наслідуванням?
+2. Чому порядок застосування декораторів має значення та як це впливає на кінцевий результат?
+3. Як за допомогою абстрактного декоратора спрощується додавання нових видів обробки?
+4. Чим небезпечне надмірне ускладнення ланцюжків декораторів і як його уникнути?
+5. Які ще декоратори можна додати до цієї системи (наприклад, обрізання пробілів, додавання підпису користувача, екранування спецсимволів) і як їх комбінувати?
+
+### Flyweight – Економія пам’яті за рахунок розділення спільного стану між об’єктами
+
+#### Завдання
+Реалізуй систему відображення дерев у 2D-грі, де кожне дерево має унікальні координати, висоту та сезон, але всі дерева одного типу (наприклад, «дуб», «сосна») ділять між собою однакові важкі дані — текстуру та модель. Використай патерн Flyweight, щоб уникнути дублювання важкої інформації та зменшити використання пам’яті.
+
+#### Кроки виконання
+1. Створи інтерфейс `TreeType` з методом:
+   - `void draw(int x, int y, String season)` — малює дерево на заданих координатах з урахуванням сезону.
+
+2. Реалізуй клас `ConcreteTreeType`, який представляє тип дерева:
+   - Зберігає **intrinsic** стан: текстуру (`texture`) та модель (`model`).
+   - Ініціалізується через конструктор.
+   - У методі `draw(...)` використовує intrinsic-дані та параметри з виклику (extrinsic).
+
+3. Створи клас `TreeFactory` (фабрика flyweight-об’єктів):
+   - Містить мапу для зберігання створених `ConcreteTreeType` (ключ — комбінація текстури та моделі).
+   - Метод `getTreeType(String texture, String model)`:
+      - Якщо об’єкт з таким ключем уже є в мапі — повертає його.
+      - Якщо ні — створює новий `ConcreteTreeType`, зберігає в мапі та повертає.
+
+4. Створи клас `Tree`:
+   - Зберігає **extrinsic** стан: координати (`x`, `y`), сезон (`season`).
+   - Має посилання на об’єкт `TreeType` (агрегація).
+   - Метод `draw()` викликає метод `draw(...)` у свого `TreeType`, передаючи extrinsic.
+
+5. Створи клас `Forest` (ліс):
+   - Містить список дерев (`List<Tree>`).
+   - Метод `plantTree(int x, int y, String season, String texture, String model)`:
+      - Використовує `TreeFactory` для отримання `TreeType`.
+      - Створює новий `Tree` з extrinsic станом і додає в список.
+   - Метод `draw()` проходить по списку дерев і викликає `draw()` для кожного.
+
+6. Додай клас `Demo` (клієнтський код):
+   - Створює об’єкт `Forest`.
+   - Засаджує його великою кількістю дерев, використовуючи повторювані типи (`texture` + `model`).
+   - Виводить у консоль кількість створених унікальних `TreeType` та кількість посаджених дерев.
+   - Для наочності можеш вивести хеш-коди або інші ідентифікатори flyweight-об’єктів, щоб підтвердити їх повторне використання.
+
+7. Перевір тестовий сценарій:
+   - Посади, наприклад, 1 000 000 дерев, але з 3-ма унікальними типами.
+   - Переконайся, що кількість об’єктів `TreeType` у фабриці дорівнює 3.
+   - Заміряй використання пам’яті до і після (опціонально).
+
+#### Питання для рефлексії
+1. Що таке intrinsic та extrinsic стан і як вони розподілені в цій системі?
+2. Чому клієнт (`Tree`) зберігає посилання на flyweight, а не сам intrinsic стан?
+3. Як фабрика допомагає уникнути дублювання даних і яка її роль у життєвому циклі flyweight-об’єктів?
+4. Чому у Flyweight частіше використовується агрегація, а не композиція між клієнтом та flyweight-об’єктом?
+5. Які ще приклади з життя або інших програм можна реалізувати через Flyweight (наприклад, відображення символів у текстовому редакторі, кэшування іконок у UI)?
+
+### Proxy – Контроль доступу та оптимізація запитів
+
+#### Завдання
+Реалізуй систему завантаження документів у компанії. Уяви, що документи зберігаються у важкому віддаленому сховищі (наприклад, хмарний сервіс).  
+Необхідно створити проксі, який:
+- кешує вже завантажені документи;
+- контролює права доступу (наприклад, лише менеджери можуть переглядати конфіденційні документи).
+
+#### Кроки виконання
+1. Створи інтерфейс `DocumentService` з методами:
+   - `Document getDocument(String docId)` — повертає документ за його ідентифікатором.
+   - `List<String> listDocuments()` — повертає список ідентифікаторів доступних документів.
+
+2. Реалізуй клас `RemoteDocumentService`:
+   - Імітує віддалений доступ до документів (можеш зробити затримку через `Thread.sleep()` для наочності).
+   - Зберігає документи в `Map<String, Document>`.
+   - Реалізує методи з інтерфейсу.
+
+3. Створи клас `Document`:
+   - Містить поля `id`, `title`, `content`.
+   - Перевизнач метод `toString()`, щоб зручно відображати документ.
+
+4. Реалізуй клас `DocumentProxy` (проксі):
+   - Має посилання на `RemoteDocumentService`.
+   - Зберігає кеш документів у `Map<String, Document>`.
+   - При виклику `getDocument()`:
+      - якщо документ є у кеші → повертає його з кеша;
+      - якщо ні → завантажує з віддаленого сервісу, кладе у кеш і повертає.
+   - Додай просту перевірку доступу:  
+     якщо `role` користувача = `"manager"` → доступ до всіх документів;  
+     якщо `"employee"` → доступ лише до публічних документів (наприклад, id починається з `"pub_"`).
+
+5. Створи клас `ClientApp`:
+   - Має метод `run(String role)`, який:
+      - створює `DocumentProxy` з переданою роллю;
+      - виводить список документів;
+      - намагається завантажити кілька документів (один публічний і один конфіденційний);
+      - викликає повторне завантаження того ж документа, щоб показати роботу кешу.
+
+6. Створи клас `Demo`:
+   - Запусти сценарій для ролей `"manager"` і `"employee"`.
+   - Порівняй поведінку (для менеджера має показати всі документи, для працівника — обмеження доступу).
+   - Переконайся, що повторне відкриття документа бере його з кеша.
+
+#### Питання для рефлексії
+1. У чому різниця між **Proxy** та **Decorator**? Чому тут використовується саме Proxy?
+2. Які задачі виконує проксі у твоєму прикладі (оптимізація, контроль доступу)?
+3. Чому ми кешуємо документи саме у проксі, а не у віддаленому сервісі?
+4. Які ще реальні приклади можна реалізувати через Proxy (наприклад, віртуальна завантажка картинок у браузері, перевірка доступу до файлів у файловій системі)?
+5. Як можна розширити приклад, щоб підтримати більше ролей або політику очищення кешу?
+
 ---
 
-## Behavioral Patterns
+</details>
+## 🤝 Поведінкові патерни
+<details>
+  <summary>Розгорнути розділ</summary>
 
 ---
 
@@ -362,9 +562,342 @@
 3. Переваги та недоліки?
 4. Коли краще не використовувати Observer?
 
+### Chain of Responsibility – Гнучка передача обробки між об’єктами
+
+#### Завдання
+Реалізуй систему перевірки замовлення в інтернет-магазині.  
+Уяви, що перед відправкою замовлення потрібно пройти кілька перевірок:
+- чи зареєстрований користувач;
+- чи є достатньо товарів на складі;
+- чи сплачено замовлення;
+- чи не перевищено ліміт вартості для безкоштовної доставки.
+
+Кожна перевірка має виконуватися у власному обробнику, а ланцюжок обробників формується динамічно.  
+Використай патерн **Chain of Responsibility**, щоб можна було легко додавати або прибирати перевірки без зміни клієнтського коду.
+
+#### Кроки виконання
+1. Створи клас `Order` з полями:
+   - `String userId`
+   - `boolean isPaid`
+   - `int quantity`
+   - `double totalPrice`
+   - конструктор і гетери.
+
+2. Створи абстрактний клас `OrderHandler`:
+   - Містить посилання на наступний обробник (`next`).
+   - Метод `setNext(OrderHandler next)` для побудови ланцюга.
+   - Метод `handle(Order order)`:
+      - Виконує перевірку (реалізується в нащадках).
+      - Якщо перевірка пройдена і є наступний обробник → передає обробку далі.
+      - Якщо перевірка не пройдена → завершує ланцюг і повідомляє про помилку.
+
+3. Реалізуй щонайменше чотири конкретні обробники:
+   - `UserValidationHandler` — перевіряє, що `userId` не порожній.
+   - `StockValidationHandler` — перевіряє, що `quantity > 0`.
+   - `PaymentValidationHandler` — перевіряє, що `isPaid = true`.
+   - `DeliveryLimitHandler` — перевіряє, що `totalPrice >= 50` (наприклад, для безкоштовної доставки).
+
+4. Створи клас `OrderProcessor`:
+   - Має метод `process(Order order, OrderHandler chain)`.
+   - Запускає обробку замовлення через початковий обробник у ланцюзі.
+   - Виводить повідомлення у консоль про результат (успішно чи ні).
+
+5. Створи клас `Demo` (клієнтський код):
+   - Створи кілька різних замовлень:
+      - некоректне (без користувача);
+      - неоплачене;
+      - з кількістю `0`;
+      - валідне замовлення з оплатою і достатньою сумою.
+   - Побудуй ланцюг із усіх перевірок:
+     ```java
+     OrderHandler chain = new UserValidationHandler()
+         .setNext(new StockValidationHandler()
+         .setNext(new PaymentValidationHandler()
+         .setNext(new DeliveryLimitHandler())));
+     ```
+   - Пропусти замовлення через ланцюг і виведи результати.
+
+#### Питання для рефлексії
+1. У чому перевага Chain of Responsibility порівняно з умовними конструкціями `if-else`?
+2. Що відбувається, якщо в середині ланцюга одна з перевірок провалюється?
+3. Як можна змінити порядок обробників і що це дасть?
+4. Як додати нову перевірку без зміни існуючих класів?
+5. Які реальні системи використовують цей патерн (наприклад, обробка HTTP-запитів, логування, middleware у фреймворках)?
+
+### Command – Інкапсуляція запиту у вигляді об’єкта
+
+#### Завдання
+Реалізуй систему керування текстовим редактором, яка підтримує виконання, скасування (Undo) та повтор (Redo) команд.  
+Уяви, що в редакторі є такі базові дії:
+- написання тексту;
+- видалення тексту;
+- копіювання та вставка;
+- зміна регістру тексту (до верхнього/нижнього).
+
+Кожна дія повинна бути оформлена у вигляді окремої команди, яку можна виконати, відкотити та при потребі повторити.
+
+#### Кроки виконання
+1. Створи клас `Editor` (Receiver), який містить:
+   - поле `StringBuilder text` (поточний текст);
+   - методи для виконання дій: `append(String str)`, `delete(int start, int end)`, `copy(int start, int end)`, `paste(int position)`, `toUpperCase(int start, int end)`, `toLowerCase(int start, int end)`;
+   - поле `String clipboard` для збереження скопійованого тексту.
+
+2. Створи інтерфейс `Command`:
+   - метод `execute()` — виконує команду;
+   - метод `undo()` — скасовує дію.
+
+3. Реалізуй щонайменше п’ять конкретних команд:
+   - `WriteCommand` — додає текст у кінець;
+   - `DeleteCommand` — видаляє частину тексту;
+   - `CopyCommand` — копіює виділений фрагмент у буфер (undo для копіювання не обов’язковий);
+   - `PasteCommand` — вставляє текст із буфера у вказану позицію;
+   - `ChangeCaseCommand` — змінює регістр тексту у вказаному діапазоні (з параметром `upper/lower`).
+
+4. Створи клас `CommandHistory`:
+   - Стек для збереження виконаних команд (для Undo);
+   - Окремий стек для Redo (повтору скасованих команд).
+
+5. Створи клас `EditorInvoker` (Invoker):
+   - метод `executeCommand(Command cmd)` — виконує команду і додає її в історію;
+   - метод `undo()` — відміняє останню команду;
+   - метод `redo()` — повторює відмінену команду.
+
+6. Створи клас `Demo` (клієнтський код):
+   - продемонструй роботу з редактором: написання тексту, видалення, копіювання/вставки, зміни регістру;
+   - виконай декілька команд і відмініть їх через `undo()`;
+   - повтори скасовані команди через `redo()`;
+   - виведи результат у консоль після кожної операції.
+
+#### Питання для рефлексії
+1. Яку перевагу дає інкапсуляція запиту в окремому об’єкті?
+2. Чому Invoker не повинен знати деталей про те, як виконується команда?
+3. Як реалізується Undo: через збереження знімку стану (Memento) чи через обернену операцію?
+4. Як можна додати нову дію (наприклад, «замінити слово») без зміни існуючих класів?
+5. У яких реальних програмах найчастіше зустрічається цей патерн (текстові редактори, графічні редактори, ігри)?
+
+### Iterator – Послідовний обхід колекцій фільмів
+
+#### Завдання
+Реалізуй систему для перегляду колекцій фільмів у різних сервісах стрімінгу.  
+Уяви, що у нас є два сервіси: `Netflix` та `Hulu`. Кожен сервіс має свій спосіб зберігання фільмів (масив, база даних тощо).  
+Завдання — створити універсальний механізм обходу колекції фільмів, не розкриваючи внутрішню структуру кожного сервісу.
+
+#### Кроки виконання
+
+1. **Створи клас `Movie` (Element):**
+   - поля: `String title`, `String genre`, `int year`;
+   - конструктор та метод `toString()` для відображення інформації про фільм.
+
+2. **Створи інтерфейс `MovieIterator` (Iterator):**
+   - метод `boolean hasNext()` — перевіряє наявність наступного фільму;
+   - метод `Movie getNext()` — повертає наступний фільм.
+
+3. **Створи абстрактний клас або інтерфейс `StreamingService` (Aggregate):**
+   - метод `MovieIterator createIterator(String genre)` — повертає ітератор для обходу фільмів певного жанру.
+
+4. **Створи конкретні сервіси (ConcreteAggregate):**
+   - `Netflix` та `Hulu`;
+   - кожен має свій спосіб зберігання фільмів;
+   - методи для отримання списку фільмів за жанром.
+
+5. **Створи конкретні ітератори (ConcreteIterator):**
+   - `NetflixIterator` та `HuluIterator`:
+      - зберігають посилання на сервіс та список фільмів;
+      - реалізують lazy load: фільм завантажується лише при виклику `getNext()`;
+      - метод `hasNext()` перевіряє, чи є ще елементи;
+      - метод `getNext()` повертає наступний фільм і підвантажує його при потребі.
+
+6. **Створи клас `Demo` (клієнтський код):**
+   - створює об’єкти `Netflix` та `Hulu`;
+   - отримує ітератор через `createIterator("комедія")` або інший жанр;
+   - обходить колекцію і виводить інформацію про кожний фільм у консоль.
+
+#### Питання для рефлексії
+
+1. Які переваги дає використання Iterator для обходу колекцій з різними структурами даних?
+2. Чому клієнт не повинен знати внутрішню реалізацію зберігання фільмів?
+3. У чому різниця між lazy loading та eager loading в ітераторах і коли що краще застосовувати?
+4. Як додати новий сервіс стрімінгу, не змінюючи код клієнта?
+5. У яких реальних програмах та системах часто використовується цей паттерн (медіа-сервіси, колекції файлів, бази даних)?
+
+### Visitor – Операції над елементами документу
+
+#### Завдання
+Реалізуй систему для роботи з документами, яка дозволяє виконувати різні операції над елементами документу без зміни самих елементів.  
+Уяви, що документ складається з різних елементів: `Text`, `Image`, `Table`.  
+Завдання — реалізувати патерн Visitor, щоб додавати нові операції (наприклад, підрахунок слів, рендеринг у HTML, експорт у PDF) без зміни класів елементів.
+
+#### Кроки виконання
+
+1. Створи інтерфейс `DocumentElement` (Element):
+   - метод `void accept(DocumentVisitor visitor)` — приймає відвідувача.
+
+2. Створи конкретні елементи документу (ConcreteElement):
+   - `Text` — поля: `String content`;
+   - `Image` — поля: `String path`, `int width`, `int height`;
+   - `Table` — поля: `int rows`, `int columns`;
+   - кожен реалізує метод `accept(DocumentVisitor visitor)` і викликає відповідний метод у відвідувачі.
+
+3. Створи інтерфейс `DocumentVisitor` (Visitor):
+   - методи для відвідування кожного типу елементу:
+      - `void visit(Text text)`;
+      - `void visit(Image image)`;
+      - `void visit(Table table)`.
+
+4. Створи конкретних відвідувачів (ConcreteVisitor):
+   - `WordCountVisitor` — підраховує кількість слів у тексті та таблицях;
+   - `HtmlRenderVisitor` — генерує HTML-представлення документу;
+
+5. Створи клас `Document` (ObjectStructure):
+   - містить список елементів `List<DocumentElement>`;
+   - метод `void accept(DocumentVisitor visitor)` обходить всі елементи та викликає `accept(visitor)` для кожного.
+
+6. Створи клас `Demo` (клієнтський код):
+   - створює документ із кількох елементів (`Text`, `Image`, `Table`);
+   - створює відвідувачів (`WordCountVisitor`, `HtmlRenderVisitor`);
+   - викликає `document.accept(visitor)` для кожного відвідувача;
+   - виводить результати у консоль.
+
+#### Питання для рефлексії
+
+1. Чому патерн Visitor дозволяє додавати нові операції без зміни класів елементів?
+2. Які обмеження є у Visitor (наприклад, важко додавати нові типи елементів)?
+3. Як Visitor допомагає розділити логіку операцій та структуру даних?
+4. У яких реальних системах часто використовується цей патерн (редактори документів, обробка AST, графи елементів)?
+5. Які переваги та недоліки порівняно з простим додаванням методів у класи елементів?
+
+### Mediator – Координація взаємодії між об’єктами
+
+#### Завдання
+Реалізуй систему чату, де користувачі можуть надсилати повідомлення один одному, але вони не взаємодіють напряму.  
+Замість цього є **Посередник (Mediator)**, який керує передачею повідомлень між користувачами.  
+Завдяки цьому користувачі не знають деталей один про одного, а лише взаємодіють із посередником.
+
+#### Кроки виконання
+
+1. Створи інтерфейс `ChatMediator` (Mediator):
+   - методи:
+      - `void sendMessage(String message, User sender)` — відправити повідомлення;
+      - `void addUser(User user)` — додати користувача до чату.
+
+2. Створи клас `ChatRoom` (ConcreteMediator):
+   - зберігає список користувачів `List<User>`;
+   - реалізує методи `sendMessage` та `addUser`;
+   - при відправці повідомлення — розсилає його всім користувачам, окрім відправника.
+
+3. Створи абстрактний клас `User` (Colleague):
+   - поля: `String name`, `ChatMediator mediator`;
+   - конструктор приймає `ChatMediator` і `name`;
+   - методи:
+      - `abstract void send(String message)` — відправити повідомлення через медіатор;
+      - `abstract void receive(String message)` — отримати повідомлення.
+
+4. Створи клас `ConcreteUser` (ConcreteColleague):
+   - реалізує методи `send` та `receive`;
+   - у `send` викликає `mediator.sendMessage(message, this)`;
+   - у `receive` виводить повідомлення у консоль у форматі:  
+     `User [name] отримав: message`.
+
+5. Створи клас `Demo` (клієнтський код):
+   - створює `ChatRoom` як медіатор;
+   - створює кількох користувачів (`User user1 = new ConcreteUser(...);`);
+   - додає користувачів у `ChatRoom` через `addUser`;
+   - відправляє повідомлення від різних користувачів;
+   - результати виводяться у консоль.
+
+
+#### Питання для рефлексії
+
+1. Чому патерн Mediator зменшує зв’язність між об’єктами?
+2. У яких випадках варто використовувати Mediator, а коли краще напряму пов’язати об’єкти?
+3. Які недоліки можуть з’явитися, якщо медіатор стає занадто складним (God Object)?
+4. Де у реальних системах застосовується Mediator (GUI компоненти, чати, ігри)?
+5. Як можна розширити систему (наприклад, зробити приватні повідомлення або історію чату)?
+
+### Memento – Збереження і відновлення стану об’єкта
+
+#### Завдання
+Реалізуй систему текстового редактора, яка дозволяє скасовувати останні зміни (Undo).  
+Для цього використай патерн **Memento**, щоб зберігати історію змін тексту без порушення інкапсуляції об’єкта.
+
+#### Кроки виконання
+
+1. Створи клас `TextEditor` (Originator):
+   - поле: `String text`;
+   - методи:
+      - `void setText(String text)` — змінити текст;
+      - `String getText()` — отримати поточний текст;
+      - `Memento save()` — створити знімок поточного стану;
+      - `void restore(Memento memento)` — відновити текст зі знімку.
+
+2. Створи клас `Memento`:
+   - приватно зберігає стан тексту (`String state`);
+   - має конструктор і геттер;
+   - доступ до стану має лише `TextEditor`.
+
+3. Створи клас `History` (Caretaker):
+   - зберігає список або стек знімків (`List<Memento>`);
+   - методи:
+      - `void saveState(Memento memento)` — додати знімок;
+      - `Memento undo()` — повернути останній знімок.
+
+4. Створи клас `Demo` (клієнтський код):
+   - створює `TextEditor` і `History`;
+   - змінює текст кілька разів, зберігає стан у `History`;
+   - виконує кілька операцій `undo()` для відновлення попередніх версій тексту;
+   - результати виводяться у консоль.
+
+
+#### Питання для рефлексії
+
+1. Чому важливо, що `Caretaker` не знає внутрішню структуру стану `Memento`?
+2. Які системи у реальному житті використовують Memento (текстові редактори, ігри, IDE)?
+3. У чому відмінність між збереженням усіх станів і використанням Memento лише для потрібних?
+4. Які ризики можуть бути, якщо зберігати дуже багато знімків (наприклад, у пам’яті)?
+5. Як можна розширити приклад (наприклад, додати Redo або зберігати кілька різних документів)?
+
+### Template Method – Шаблонний метод
+
+#### Завдання
+Реалізуй систему приготування напоїв (наприклад, кави та чаю) за допомогою патерна **Template Method**.  
+Шаблонний метод дозволяє визначити **скелет алгоритму** у базовому класі, а деталі реалізації залишити у підкласах.
+
+#### Кроки виконання
+
+1. Створи абстрактний клас `Beverage`:
+   - метод `final void prepareRecipe()` — **шаблонний метод**, який описує послідовність кроків приготування:
+      1. `boilWater()` — закип'ятити воду;
+      2. `brew()` — заварити (реалізується у підкласах);
+      3. `pourInCup()` — налити в чашку;
+      4. `addCondiments()` — додати добавки (реалізується у підкласах).
+   - абстрактні методи: `brew()`, `addCondiments()`.
+   - конкретні методи: `boilWater()`, `pourInCup()` — реалізація спільна для всіх напоїв.
+
+2. Створи клас `Tea` (підклас `Beverage`):
+   - реалізує методи `brew()` та `addCondiments()` для чаю.
+
+3. Створи клас `Coffee` (підклас `Beverage`):
+   - реалізує методи `brew()` та `addCondiments()` для кави.
+
+4. Створи клас `Demo` (клієнтський код):
+   - створює об’єкти `Tea` та `Coffee`;
+   - викликає метод `prepareRecipe()` для кожного напою;
+   - результати виводяться у консоль, показуючи послідовність кроків приготування.
+
+#### Питання для рефлексії
+
+1. Чому шаблонний метод роблять `final` у базовому класі?
+2. Які переваги дає виділення загальних кроків алгоритму у базовому класі?
+3. У яких ситуаціях варто застосовувати Template Method у реальному житті (наприклад, при підготовці звітів, обробці даних, ігрові алгоритми)?
+4. Чи можна використовувати Hook-методи для додаткової гнучкості? Як це зробити?
+5. Які ризики виникають, якщо підкласи змінюють порядок кроків алгоритму?
+
 ---
 
-## Architectural Patterns
+</details>
+## 🏛 Архітектурні патерни
+<details>
+  <summary>Розгорнути розділ</summary>
 
 ---
 
@@ -385,45 +918,3 @@ View не знає про модель напряму — лише через к
 4. Коли MVC – зайва абстракція?
 
 ---
-
-
-
-# OOD exercises
-
-| Назва Задачі | Короткий Опис | Ключові Об'єкти/Класи | Застосовувані Принципи/Патерни | Посилання на Детальне Рішення (з UML та Кодом)                                                              |
-|---|---|---|---|-------------------------------------------------------------------------------------------------------------|
-| **Дизайн Парковки (Design Parking Lot)** | Система управління парковкою з поверхами, в'їздами/виїздами, різними ТЗ, квитками, оплатою, відображенням вільних місць. | `ParkingLot`, `ParkingFloor`, `ParkingSpot`, `Vehicle`, `ParkingTicket`, `EntrancePanel`, `ExitPanel`, `Payment`, `ParkingManager`, `FareCalculator`. | SOLID, Singleton, Strategy, Facade, Composition.| https://www.designgurus.io/course-play/grokking-the-object-oriented-design-interview/doc/design-a-parking-lot , https://bytebytego.com/courses/object-oriented-design-interview/design-a-parking-lot |
-| **Дизайн Торгового Автомата (Design Vending Machine)** | Торговий автомат, що приймає монети, дозволяє вибирати продукти, повертає решту, має функції скасування/скидання. | `VendingMachine`, `Coin` (enum), `Item` (enum), `Inventory`, `Bucket`, `Exceptions`. | State, Strategy, Encapsulation, Abstraction. | https://javarevisited.blogspot.com/2016/06/design-vending-machine-in-java.html |
-| **Дизайн Шахової Гри (Design Chess Game)** | Клас-структура для шахової гри: дошка, фігури, правила ходів, перевірка перемоги. | `Board`, `Piece` (з підкласами), `Spot`/`Cell`, `Player`, `Game`. | Strategy, State, Observer, Polymorphism, Inheritance. | https://medium.com/@kumar.atul.2122/design-chess-game-low-level-design-using-ood-3f15361403b1 |
-| **Система Управління Бібліотекою (Design Library Management System)** | Система для управління книгами, користувачами, позиками, поверненнями. | `Book`, `Member`/`User`, `Loan`/`Borrowing`, `Library`, `Librarian`. | MVC, Strategy, Observer, Composition. | https://medium.com/@kumar.atul.2122/design-library-management-system-low-level-design-using-ood-a8eed1691e53     |
-| **Гра "Змії та Драбини" (Snake and Ladder Game)** | Багатокористувацька гра з дошкою N x N, випадковим розміщенням змій та драбин, правилами ходів та перемоги. | `Board`, `Dice`, `Player`, `Game`, `SpecialEntity` (абстрактний), `Snake`, `Ladder`. | Strategy, State, Polymorphism, Inheritance. | https://www.geeksforgeeks.org/system-design/design-snake-and-ladder-game-using-python-oops/ |
-
-## Details  
-  
-**Дизайн Парковки (Design Parking Lot)**  
-&nbsp;&nbsp;&nbsp;&nbsp;Розробка системи управління парковкою є однією з найпопулярніших задач на LLD-співбесідах, що дозволяє оцінити здатність кандидата моделювати фізичні об'єкти та застосовувати принципи ООП. Система повинна підтримувати кілька поверхів, мати численні точки в'їзду та виїзду, обслуговувати різні типи транспортних засобів (наприклад, автомобілі, вантажівки, мотоцикли) та включати функціонал для видачі квитків, оплати та відображення доступних місць.   
-&nbsp;&nbsp;&nbsp;&nbsp;Ключові об'єкти та класи, які слід розглянути, включають: ParkingLot (центральний компонент), ParkingFloor (для управління поверхами), ParkingSpot (з різними типами, такими як Handicapped, Compact, Large, Motorcycle, Electric), Vehicle (з підкласами для різних типів транспортних засобів), ParkingTicket, EntrancePanel та ExitPanel (для взаємодії з користувачами), Payment (для обробки транзакцій), ParkingManager (для управління розподілом місць) та FareCalculator (для розрахунку плати).   
-&nbsp;&nbsp;&nbsp;&nbsp;При проектуванні цієї системи можна застосувати кілька патернів та принципів. Наприклад, патерн Singleton може бути використаний для класу ParkingLot, щоб забезпечити наявність лише одного екземпляра парковки. Патерн Strategy може бути застосований для інкапсуляції правил ціноутворення у    
-FareStrategy (наприклад, BaseFareStrategy, PeakHoursFareStrategy), дозволяючи FareCalculator динамічно перемикатися між правилами. Патерн Facade може бути реалізований у класі    
-ParkingLot для спрощення взаємодії клієнтів, делегуючи завдання підсистемам, таким як ParkingManager та FareCalculator. Композиція буде використовуватися для побудови відносин між    
-ParkingLot, ParkingFloor та ParkingSpot.    
-  
-**Дизайн Торгового Автомата (Design Vending Machine)**  
-&nbsp;&nbsp;&nbsp;&nbsp;Задача проектування торгового автомата є класичним прикладом для демонстрації розуміння ООП та патернів дизайну. Основні вимоги включають: прийом різних монет (наприклад, 1, 5, 10, 25 центів), можливість вибору продуктів (наприклад, Coke, Pepsi, Soda), повернення решти, функція скасування запиту та можливість скидання для постачальника.   
-&nbsp;&nbsp;&nbsp;&nbsp;Ключові об'єкти та класи можуть включати: VendingMachine (основний інтерфейс), перелічення (enum) для Coin та Item (для представлення підтримуваних монет та продуктів), класи для управління інвентарем (Inventory), а також спеціалізовані класи винятків (NotFullPaidException, NotSufficientChangeException, SoldOutException).   
-&nbsp;&nbsp;&nbsp;&nbsp;При проектуванні торгового автомата можуть бути використані патерни State для управління станами автомата (наприклад, Idle, ProcessingPayment, DispensingItem) та Strategy для обробки платежів або видачі решти. Принципи інкапсуляції та абстракції будуть застосовані для приховування внутрішніх деталей реалізації та надання чистого інтерфейсу.
-  
-**Дизайн Шахової Гри (Design Chess Game)**  
-&nbsp;&nbsp;&nbsp;&nbsp;Проектування шахової гри — це ще одна поширена задача, яка перевіряє здатність кандидата структурувати складну логіку за допомогою ООП. Необхідно розробити клас-структуру, яка включає дошку, різні шахові фігури, правила ходів для кожної фігури та механізми для перевірки перемоги.   
-&nbsp;&nbsp;&nbsp;&nbsp;Основні об'єкти та класи: Board (для представлення шахової дошки), Piece (абстрактний базовий клас для всіх фігур) з підкласами, такими як Pawn, Knight, Bishop, Rook, Queen, King (кожен з яких реалізує свою унікальну логіку ходів), Spot або Cell (для представлення окремих клітинок на дошці), Player та Game (для управління загальним ігровим процесом).   
-&nbsp;&nbsp;&nbsp;&nbsp;Принципи поліморфізму та успадкування є центральними для цієї задачі, оскільки різні фігури (підкласи Piece) мають спільну поведінку, але відрізняються у своїх правилах ходів. Патерн Strategy може бути використаний для інкапсуляції логіки можливих ходів для кожної фігури, дозволяючи динамічно змінювати або додавати нові правила. Патерн State може відстежувати стан гри або окремих фігур. Патерн Observer може бути корисним для оновлення користувацького інтерфейсу при зміні стану гри.
-  
-**Система Управління Бібліотекою (Design Library Management System)**  
-&nbsp;&nbsp;&nbsp;&nbsp;Проектування системи управління бібліотекою є поширеною задачею, що дозволяє продемонструвати розуміння відносин між об'єктами та управління колекціями. Система повинна дозволяти управління книгами, користувачами, процесами позики та повернення книг.   
-&nbsp;&nbsp;&nbsp;&nbsp;Ключові об'єкти та класи включають: Book (з атрибутами, такими як назва, автор, ISBN), Member або User (для представлення користувачів бібліотеки), Loan або Borrowing (для відстеження позичених книг), Library (як центральний клас, що управляє колекціями книг та членів) та Librarian (для адміністративних функцій).   
-&nbsp;&nbsp;&nbsp;&nbsp;Ця задача може використовувати архітектурний патерн Model-View-Controller (MVC) для розділення даних, інтерфейсу користувача та обробки вхідних даних. Патерн Strategy може бути застосований для різних типів пошуку книг (за автором, назвою, ISBN), а патерн Observer — для сповіщень про прострочені книги або нові надходження. Композиція буде використовуватися для представлення колекцій книг та користувачів у класі    
-  
-**Гра "Змії та Драбини" (Snake and Ladder Game)**  
-&nbsp;&nbsp;&nbsp;&nbsp;Проектування багатокористувацької гри "Змії та Драбини" — це задача, яка дозволяє продемонструвати навички моделювання ігрової логіки та застосування ООП. Гра передбачає дошку розміром N x N з випадково розміщеними зміями та драбинами, правила ходів за допомогою кубика та умови перемоги.   
-&nbsp;&nbsp;&nbsp;&nbsp;Основні об'єкти та класи: Board (для представлення ігрового поля), Dice (для імітації кидка кубика), Player (для кожного гравця), Game (для управління ігровим циклом), а також абстрактний клас SpecialEntity з підкласами Snake та Ladder (для представлення спеціальних клітинок, що змінюють позицію гравця).   
-&nbsp;&nbsp;&nbsp;&nbsp;Принципи поліморфізму та успадкування будуть ключовими для обробки SpecialEntity, де Snake та Ladder успадковують спільну поведінку, але мають різні ефекти. Патерн Strategy може бути використаний для реалізації різних правил гри або механізмів ходів. Патерн State може відстежувати стан гри або кожного гравця.
